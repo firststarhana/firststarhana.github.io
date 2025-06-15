@@ -1,4 +1,6 @@
-title: Firstarhana's World  # 여기에 블로그 제목을 쓰세요
-description: A place for my novels and stories. # 여기에 블로그 소개글을 쓰세요
+title: Firstarhana's World
+description: A place for my novels and stories.
 
-theme: jekyll-theme-minimal # <-- 여기가 '디자인 세트'를 고르는 부분입니다!
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+- jekyll-remote-theme
