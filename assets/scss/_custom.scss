@@ -1,0 +1,27 @@
+/*
+    You can add your own custom styles here.
+*/
+
+:root {
+    /* 라이트 모드용 연초록 배경 */
+    --body-background: #fcfffc;
+}
+
+[data-scheme="dark"] {
+    /* 다크 모드 배경은 기존대로 */
+    --body-background: #1a1a2e;
+}
+
+html {
+    font-size: 85% !important;
+}
+
+.container.main-container {
+    max-width: 1150px !important;
+    margin: 0 auto !important;
+}
+
+body {
+    margin-left: 0px !important;
+}
+
