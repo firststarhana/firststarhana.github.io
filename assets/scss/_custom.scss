@@ -3,18 +3,18 @@
 */
 
 html {
-    font-size: 84% !important;
+    font-size: 87% !important;
 }
 
 .container.main-container {
-    max-width: 1150px !important;
+    max-width: 1000px !important;
     margin: 0 auto !important;
 }
 
 body {
     margin-left: 0px !important;
     /* 라이트 모드용 부드러운 그라데이션 배경 */
-    background: linear-gradient(135deg, #f5ffff 0%, #fffaf3 100%) !important;
+    background: linear-gradient(135deg, #f5fcff 0%, #fff8fb 100%) !important;
 }
 
 [data-scheme="dark"] body {
