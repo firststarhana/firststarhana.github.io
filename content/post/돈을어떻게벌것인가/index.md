@@ -3,6 +3,7 @@ title: 돈을어떻게벌것인가
 description: "부자가 되는 방법에 대한 생각을 담은 글입니다. 기업가 정신과 투자의 길을 살펴보며, 결국 '무엇을 만들어 팔 것인가'라는 본질적인 질문에 도달합니다."
 date: 2025-07-06 00:00:00+0000
 image: alexander-grey-8lnbXtxFGZw-unsplash.jpg
+slug: money
 weight: 1
 ---
 어떻게 부자가 되는건가는 우주 최고의 미스테리라고 해도 과언이 아니죠.
