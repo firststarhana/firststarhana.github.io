@@ -59,3 +59,26 @@ h3.article-subtitle {
     background-color: #1a2332; /* 진한 파란색 배경 */
     color: #e0e0e0; /* 밝은 회색 글자 */
 }
+
+/* 오른쪽 사이드바 완전히 숨기고 포스트 폭 전체로 확장 */
+.right-sidebar {
+    display: none !important;
+}
+
+/* 메인 콘텐츠가 전체 폭을 차지하도록 */
+.article-page .main-container {
+    grid-template-columns: auto 1fr !important;
+}
+
+/* 컨테이너를 flexbox로 재정의하여 오른쪽 여백 제거 */
+.container.main-container.flex.on-phone--column.extended {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+/* 메인 콘텐츠 영역이 전체 폭 사용 */
+main.main.full-width {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
