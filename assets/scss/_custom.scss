@@ -7,12 +7,20 @@ html {
 }
 
 .container.main-container {
-    max-width: 1120px !important;
+    max-width: 1200px !important;
     margin: 0 auto !important;
+    /*
+     * [핵심 코드]
+     * 전체 컨테이너를 왼쪽으로 이동시켜 포스트 영역의 중앙을 화면 중앙에 맞춥니다.
+     * transform: translateX()는 요소의 위치를 수평으로 이동시킵니다.
+     * calc() 함수를 사용하여 왼쪽 사이드바 변수(--left-sidebar-max-width)의 절반 값을 계산합니다.
+     * 음수 값을 주어 왼쪽으로 이동시킵니다.
+     * 이 방법은 미디어 쿼리에서 사이드바 너비가 변경되어도 자동으로 계산되므로 완벽하게 동적으로 작동합니다.
+     */
+    transform: translateX(calc(var(--left-sidebar-max-width) / -2)) !important;
 }
 
 body {
-    margin-left: 0px !important;
     /* 라이트 모드용 부드러운 그라데이션 배경 */
     background: linear-gradient(135deg, #f5fcff 0%, #fff8fb 100%) !important;
 }
@@ -113,4 +121,3 @@ main.main.full-width {
         --left-sidebar-max-width: 30%; /* 기본 20%에서 확대 */
     }
 }
-
