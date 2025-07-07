@@ -7,7 +7,7 @@ html {
 }
 
 .container.main-container {
-    max-width: 1000px !important;
+    max-width: 1120px !important;
     margin: 0 auto !important;
 }
 
@@ -80,5 +80,37 @@ h3.article-subtitle {
 main.main.full-width {
     max-width: 100% !important;
     width: 100% !important;
+}
+
+/* 왼쪽 사이드바 폭 확대 */
+@media(min-width: 768px) {
+    .container.extended {
+        --left-sidebar-max-width: 35%; /* 기본 25%에서 확대 */
+    }
+}
+
+@media(min-width: 1024px) {
+    .container.extended {
+        --left-sidebar-max-width: 30%; /* 기본 20%에서 확대 */
+    }
+}
+
+@media(min-width: 1280px) {
+    .container.extended {
+        --left-sidebar-max-width: 25%; /* 기본 15%에서 확대 */
+    }
+}
+
+/* 컴팩트 레이아웃도 동일하게 적용 */
+@media(min-width: 768px) {
+    .container.compact {
+        --left-sidebar-max-width: 35%; /* 기본 25%에서 확대 */
+    }
+}
+
+@media(min-width: 1024px) {
+    .container.compact {
+        --left-sidebar-max-width: 30%; /* 기본 20%에서 확대 */
+    }
 }
 
