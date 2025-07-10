@@ -3,7 +3,7 @@ title: 2025-07-08 생각들
 description: "안녕하세요"
 slug: 2025-07-08-thoughts
 date: 2025-07-08 00:00:00+0000
-image: 
+image: Google_AI_Studio_2025-07-09T20_12_21.305Z_waifu2x_art_noise1_scale.png
 weight: 1
 ---
 안녕하세요 좋은아침입니다
@@ -147,51 +147,33 @@ Flutter로 Windows 앱을 빌드하려면 C++ 컴파일러가 포함된 **Visual
 
 이제 샘플 카운터 앱이 Windows 데스크톱 창으로 실행될 것입니다. 이 기본 템플릿을 수정하면서 원하시는 '자산 목표 달성 앱' 개발을 시작하시면 됩니다!
 
-1번 2번 3번 4번은 다 한것같은데...
-flutter doctor을 하니 문제가 좀 있군요...
-
 ---
+그래요 오늘은 10일이에요 또 하루가 지났군요 근데 하루가 지날때마다 새로 글을 만드는건 좀 비효율적인것 같아요 그냥 여기서 계속 합시다
 
-## `flutter doctor` 문제 해결하기
+imagen에 프롬프트를 한국어로 입력해도 성능저하가 전혀 없고 오히려 더 잘알아먹는 느낌이 드네요
 
-`flutter doctor`를 실행해 보니 몇 가지 문제가 발견되었네요. 괜찮습니다. 이런 문제들은 Flutter 개발 환경을 처음 설정하거나 오랜만에 다시 시작할 때 흔히 겪는 일입니다. 하나씩 해결해 봅시다.
+제 착각이었군요 프롬프트는 무조건 번역기에 돌려서 영어로 하세요.
 
-`flutter doctor` 결과에서 가장 중요한 부분은 아래 두 가지입니다.
+그래요 아무튼 좋습니다 아침산책이나 다녀와야겠군요
 
-```
-[X] Android toolchain - develop for Android devices
-    X Unable to locate Android SDK.
-...
-[!] Android Studio (version 2023.3)
-    X Unable to determine bundled Java version.
-```
+저도 그림인공지능을 돌려보고싶은데 뭐 어케하는건지 잘 모르겠어요 잘 뽑는 사람들은 AI그림 엄청나게 잘뽑든데...
 
-### 1. Android SDK 경로 설정하기 (가장 중요한 문제)
+● WSL 터미널에서 한 번에 텍스트 지우는 방법들:
 
-`Unable to locate Android SDK` 메시지는 Flutter가 안드로이드 개발에 필요한 도구(SDK)를 어디서 찾아야 할지 모른다는 뜻입니다. Android Studio를 설치할 때 SDK도 함께 설치되는데, 이 경로를 Flutter에게 알려주어야 합니다.
+  - Ctrl + A: 전체 선택
+  - Ctrl + U: 커서 앞의 모든 텍스트 지우기
+  - Ctrl + K: 커서 뒤의 모든 텍스트 지우기
+  - Ctrl + W: 단어 단위로 지우기
+  - Ctrl + L: 화면 지우기 (clear)
 
-1.  **Android Studio (2024.2 버전)를 실행**합니다.
-2.  **SDK 경로 찾기:**
-    *   Android Studio의 Welcome 화면에서 `More Actions` -> `SDK Manager`를 선택하거나, 프로젝트가 열려있다면 `File` > `Settings...` > `Languages & Frameworks` > `Android SDK` 로 이동합니다.
-    *   창 상단에 있는 **'Android SDK Location'** 항목의 경로를 복사합니다. 보통 `C:\Users\사용자이름\AppData\Local\Android\Sdk` 와 같은 형태입니다.
-3.  **Flutter에 SDK 경로 알려주기:**
-    *   VS Code나 Windows Terminal에서 다음 명령어를 실행합니다. 복사한 경로를 큰따옴표 안에 붙여넣으세요. (경로에 있는 `사용자이름`은 실제 PC의 사용자 이름으로 바꿔주세요)
-    ```powershell
-    flutter config --android-sdk "C:\Users\YourUsername\AppData\Local\Android\Sdk"
-    ```
+  마우스 드래그로 선택한 후 Ctrl + C로 복사, Ctrl + V로
+  붙여넣기도 됩니다.
 
-### 2. Android 라이선스 동의하기
+  ---
+여러분은 윈도우로 개발할 생각 절대하지마시고 어떻게든지 돈을 모아서 맥을 사십시오..
 
-SDK 경로를 설정하고 나면, 관련 라이선스에 동의해야 합니다. 터미널에 아래 명령어를 입력하고, 진행 과정에서 나타나는 모든 질문에 `y`를 입력하고 엔터를 누르세요.
+아무튼 좀 여러가지 문제가 있는데요...
 
-```powershell
-flutter doctor --android-licenses
-```
+claude code가 왜 vscode 터미널에서 실행이 안되는가 아니 정확하게 말하면 vscode 에서 우분투 터미널이 왜 실행이 안되는가... 이걸 일단 좀 봐야할것같은데...
 
-### 3. 다시 `flutter doctor` 실행 및 권장 사항
-
-위 과정을 마친 후, 다시 `flutter doctor`를 실행해 보세요. `Android toolchain` 항목이 `[√]`로 바뀌었다면 성공입니다!
-
-추가로, `A new version of Flutter is available!` 라는 메시지가 보이니 `flutter upgrade` 명령어로 Flutter를 최신 버전으로 업데이트하는 것을 권장합니다. 또한, 사용하지 않는 이전 버전의 Android Studio(2023.3)는 혼동을 피하기 위해 '앱 및 기능'에서 제거하는 것이 좋습니다.
-
-이제 깨끗한 환경에서 다시 '자산 목표 달성 앱' 만들기에 집중하실 수 있겠네요!
+제일 이상한거는 이게 cursor에서는 또 된다는겁니다..
